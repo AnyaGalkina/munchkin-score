@@ -1,0 +1,57 @@
+.character{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background: rgba(0, 0, 0, 0.5);
+    min-width: 320px;
+    padding: 10px;
+}
+.characterContainer {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 20%;
+}
+
+.name {
+    width: 220px;
+    font-size: 26px;
+    color: aliceblue;
+    word-wrap: break-word;
+}
+
+.score {
+    font-size: 26px;
+    color: aliceblue;
+    margin: 0 10px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    padding: 10px;
+    border-radius: 20%;
+}
+
+.deleteContainer {
+    /*margin-left: 2px;*/
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+.button{
+    /*margin: 10px 5px;*/
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    font-weight: bold;
+}

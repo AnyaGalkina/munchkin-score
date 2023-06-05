@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
-import {Button} from './Button';
+import {Button} from '../Button';
 import {useDispatch} from 'react-redux';
-import {setCharacter} from '../slice/charactersSlice';
-import {Modal} from './modal/Modal';
-import {random} from '../common/utils/random';
-import {images} from '../common/utils/images';
+import {setCharacter} from '../../slice/charactersSlice';
+import {Modal} from '../modal/Modal';
+import {random} from '../../common/utils/random';
+import {images} from '../../common/utils/images';
+import {TextField} from "@material-ui/core";
+import styles from './AddNewCharacter.module.css'
 
 
 export const AddNewCharacter = () => {
@@ -29,11 +31,21 @@ export const AddNewCharacter = () => {
     }
 
     return (
-        <div>
-            Add new character:
-            <input type="text" onChange={onInputChange} value={newCharacterName}/>
-            <Button title={'Choose avatar'} onClick={onAvatarChange}/>
-            <Button title={'Save'} onClick={onAddNewCharacterClick}/>
+        <div className={styles.addContainer}>
+            Add player:
+            <TextField variant="outlined" onChange={onInputChange} value={newCharacterName} style={{cursor: 'pointer'}} color="secondary"  />
+            {/*<Input onChange={onInputChange} value={newCharacterName} style={{cursor: 'pointer'}} variant="outlined" />*/}
+            {/*<input type="text" onChange={onInputChange} value={newCharacterName}/>*/}
+            <div>
+                <div className={styles.block}>
+                    <Button
+                        title={'Choose avatar'}
+                        onClick={onAvatarChange} className={styles.button}/>
+                </div>
+                <div className={styles.block}>
+                    <Button title={'Save'} onClick={onAddNewCharacterClick} className={styles.button}/>
+                </div>
+            </div>
             {isOpen
                 ? <Modal setOpen={setIsOpen} setNewCharacterAvatar={setNewCharacterAvatar} isOpen={isOpen}/>
                 : ''

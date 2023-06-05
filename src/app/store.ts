@@ -1,32 +1,24 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import thunk from 'redux-thunk';
-
-import { loadState, saveState } from '../common';
-import { cartReducer, productsReducer } from '../features';
-
 import { appReducer } from './app-reducer';
+import {saveState, loadState} from '../common/utils/local-storage';
+import {charactersReducer} from '../slice/charactersSlice';
 
 export const rootReducer = combineReducers({
-    productsPage: productsReducer,
-    cartPage: cartReducer,
+    charactersPage: charactersReducer,
     app: appReducer,
 });
 
 export const store = configureStore({
     reducer: rootReducer,
     middleware: getDefaultMiddleware => getDefaultMiddleware().prepend(thunk),
-    preloadedState: { ...rootReducer, cartPage: loadState() },
+    preloadedState: { ...rootReducer, charactersPage: loadState() },
     devTools: true,
 });
 
 store.subscribe(() => {
-    saveState(store.getState().cartPage);
-    // debounce(() => {
-    //     // we use debounce to save the state once each 800ms
-    //     // for better performances in case multiple changes occur in a short time
-    //     saveState(store.getState().cartPage);
-    // }, 800);
+    saveState(store.getState().charactersPage);
 });
 
 export type AppStateType = ReturnType<typeof rootReducer>;

@@ -1,12 +1,8 @@
-import React, { memo, ReactElement } from 'react';
-
-// eslint-disable-next-line import/no-unresolved
-import { Button, Dialog, DialogActions, DialogTitle, Slide } from '@material-ui/core';
-import { TransitionProps } from '@material-ui/core/transitions';
-
-import ordered from '../../assets/image/ordered.png';
-
+import React, {memo, ReactElement} from 'react';
+import {Button, Dialog, DialogActions, DialogTitle, Slide} from '@material-ui/core';
+import {TransitionProps} from '@material-ui/core/transitions';
 import styles from './Modal.module.css';
+import {images} from '../../common/utils/images';
 
 const Transition = React.forwardRef(function Transition(
     props: TransitionProps & {
@@ -19,31 +15,43 @@ const Transition = React.forwardRef(function Transition(
 
 type PropsType = {
     setOpen: (open: boolean) => void;
-    open: boolean;
+    isOpen: boolean;
+    setNewCharacterAvatar: any
 };
 
-export const Modal = memo(({ setOpen, open }: PropsType): ReactElement => {
-    const handleClose = (): void => {
+export const Modal = memo(({setOpen, setNewCharacterAvatar, isOpen}: PropsType): ReactElement => {
+    const [avatar, setAvatar] = React.useState<string>('');
+
+
+    const onSaveClick = (): void => {
+        setNewCharacterAvatar(avatar);
         setOpen(false);
-    };
+    }
 
     return (
         <div>
             <Dialog
-                open={open}
+                open={isOpen}
                 // @ts-ignore
                 TransitionComponent={Transition}
                 keepMounted
-                onClose={handleClose}
+                onClose={onSaveClick}
                 aria-describedby="alert-dialog-slide-description"
             >
-                <img className={styles.img} alt="order" src={ordered} />
-                <DialogTitle style={{ textAlign: 'center' }}>
-                    Your order has been sent to your email
-                </DialogTitle>
 
+                <DialogTitle style={{textAlign: 'center'}}>
+                    Choose your avatar
+                </DialogTitle>
+                {images.map((image: string, index: number) => {
+                    return (
+                        <div onClick={() => setAvatar(image)}>
+                            <img key={index} className={styles.img} alt="order" src={image}/>
+                        </div>
+                    )
+                })
+                }
                 <DialogActions>
-                    <Button onClick={handleClose}>Ok</Button>
+                    <Button onClick={onSaveClick}>Save</Button>
                 </DialogActions>
             </Dialog>
         </div>

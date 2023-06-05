@@ -1,17 +1,17 @@
-import { InitialStateCartType } from '../../features/cartPage/cart-reducer';
+// import { InitialStateCartType } from '../../features/cartPage/cart-reducer';
 
-export const saveState = (state: InitialStateCartType): void => {
+export const saveState = (state: any): void => {
     try {
-        localStorage.setItem('order', JSON.stringify(state));
+        localStorage.setItem('characters', JSON.stringify(state));
         // eslint-disable-next-line no-empty
     } catch (e) {
         // Ignore write errors.
     }
 };
 
-export const loadState = (): InitialStateCartType | undefined => {
+export const loadState = (): any | undefined => {
     try {
-        const serializedState = localStorage.getItem('order');
+        const serializedState = localStorage.getItem('characters');
 
         if (serializedState === null) {
             return undefined;
