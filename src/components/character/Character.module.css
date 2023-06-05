@@ -30,6 +30,7 @@
 
 .score {
     font-size: 26px;
+    font-weight: bolder;
     color: aliceblue;
     margin: 0 10px;
     background: rgba(0, 0, 0, 0.5);

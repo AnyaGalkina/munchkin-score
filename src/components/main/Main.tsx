@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 import {Character} from '../character/Character';
 import {CharacterType} from '../../slice/charactersSlice';
 import {AddNewCharacter} from '../addNewCharacter/AddNewCharacter';
-import {ChooseFirstPlayer} from '../ChooseFirstPlayer';
+import {ChooseFirstPlayer} from '../chooseFirstPlayer/ChooseFirstPlayer';
 import styles from './Main.module.css'
 
 export const Main = () => {

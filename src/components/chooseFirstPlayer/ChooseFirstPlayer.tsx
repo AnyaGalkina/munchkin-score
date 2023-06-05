@@ -1,8 +1,9 @@
 import React,  {useState}  from 'react';
 import {useSelector} from 'react-redux';
-import {Button} from './Button';
-import {CharacterType} from '../slice/charactersSlice';
-import {random} from '../common/utils/random';
+import {Button} from '../Button';
+import {CharacterType} from '../../slice/charactersSlice';
+import {random} from '../../common/utils/random';
+import styles from './ChooseFirstPlayer.module.css'
 
 
 export const ChooseFirstPlayer = () => {
@@ -16,9 +17,9 @@ export const ChooseFirstPlayer = () => {
     }
 
     return (
-        <div>
-            <Button title={'How go first?'} onClick={onHowGoFirstClick}/>
-            {firstPlayer && <div>{firstPlayer} goes first </div>}
+        <div className={styles.container}>
+            <Button title={'How go first? 🎲'} onClick={onHowGoFirstClick} className={styles.button}/>
+            {firstPlayer && <div>{firstPlayer} play first </div>}
         </div>
     );
 };

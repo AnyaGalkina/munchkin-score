@@ -32,10 +32,8 @@ export const AddNewCharacter = () => {
 
     return (
         <div className={styles.addContainer}>
-            Add player:
+            <h3 className={styles.text}>Add player:</h3>
             <TextField variant="outlined" onChange={onInputChange} value={newCharacterName} style={{cursor: 'pointer'}} color="secondary"  />
-            {/*<Input onChange={onInputChange} value={newCharacterName} style={{cursor: 'pointer'}} variant="outlined" />*/}
-            {/*<input type="text" onChange={onInputChange} value={newCharacterName}/>*/}
             <div>
                 <div className={styles.block}>
                     <Button
