@@ -16,7 +16,7 @@ export const AddNewCharacter = () => {
     const [newCharacterAvatar, setNewCharacterAvatar] = useState('')
 
     const onAddNewCharacterClick = () => {
-        const characterAvatar = newCharacterAvatar ? newCharacterAvatar : images[random(images.length - 1)]
+        const characterAvatar = newCharacterAvatar ? newCharacterAvatar : images[random(images.length)]
 
         dispatch(setCharacter({characterName: newCharacterName, score: 1, avatar: characterAvatar }))
         setNewCharacterName('')

@@ -3,7 +3,6 @@ import {useDispatch} from 'react-redux';
 import {addScore, CharacterType, deleteCharacter, subtractScore} from '../../slice/charactersSlice';
 import styles from './Character.module.css'
 import {Button} from '../Button';
-// import {} from "@mui/icons-material";
 import {IconButton} from "@material-ui/core";
 
 export const Character = ({character}: {character: CharacterType}) => {

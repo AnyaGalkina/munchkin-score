@@ -12,7 +12,7 @@ export const ChooseFirstPlayer = () => {
     const [firstPlayer, setFirstPlayer] = useState('');
 
     const onHowGoFirstClick = () => {
-        let randomNumber = random( characters.length - 1);
+        let randomNumber = random( characters.length );
         setFirstPlayer(characters[randomNumber].characterName);
     }
 

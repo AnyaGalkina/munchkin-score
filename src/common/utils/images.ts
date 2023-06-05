@@ -13,10 +13,12 @@ import i12 from '../../assets/images/12.png';
 import i13 from '../../assets/images/13.png';
 import i14 from '../../assets/images/14.png';
 import i15 from '../../assets/images/15.png';
+import i16 from '../../assets/images/16.png';
 import i17 from '../../assets/images/17.png';
 import i18 from '../../assets/images/18.png';
+import i19 from '../../assets/images/19.png';
 import i20 from '../../assets/images/20.png';
 import i21 from '../../assets/images/21.png';
 import i22 from '../../assets/images/22.png';
 
-export const images: string[] = [i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15,  i17, i18, i20, i21, i22];
+export const images: string[] = [i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15,  i16, i17, i18, i19, i20, i21, i22];

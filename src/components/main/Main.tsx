@@ -5,6 +5,7 @@ import {CharacterType} from '../../slice/charactersSlice';
 import {AddNewCharacter} from '../addNewCharacter/AddNewCharacter';
 import {ChooseFirstPlayer} from '../chooseFirstPlayer/ChooseFirstPlayer';
 import styles from './Main.module.css'
+import no from '../../assets/images/no.png'
 
 export const Main = () => {
     const characters = useSelector((state: any): CharacterType[] => state.charactersPage.characters);
@@ -18,7 +19,10 @@ export const Main = () => {
                 ? characters.map((character: CharacterType, index: number) => {
                     return <Character key={index} character={character}/>
                 })
-                : <div>No characters</div>
+                : <div>
+                    <h4> No players yet</h4>
+                    <img src={no} style={{width: '300px'}}/>
+                </div>
             }
             <AddNewCharacter/>
             {showCharacters ? <ChooseFirstPlayer/> : ''}

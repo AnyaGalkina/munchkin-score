@@ -13,12 +13,11 @@ type CharactersStateType = {
 export const charactersSlice = createSlice({
     name: 'characters',
     initialState: {
-        characters: [{characterName: 'dvarf', avatar: '', score: 1}],
+        characters: [],
         totalUsersCount: 0,
     } as CharactersStateType,
     reducers: {
         setCharacter(state: CharactersStateType, action: PayloadAction<CharacterType>) {
-            debugger
             state.characters.unshift(action.payload);
             console.log(state.characters)
         },
