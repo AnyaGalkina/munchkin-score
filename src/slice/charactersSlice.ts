@@ -1,6 +1,7 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 export type CharacterType = {
+    id: number;
     characterName: string;
     score: number;
     avatar: string;
@@ -23,7 +24,7 @@ export const charactersSlice = createSlice({
         },
         addScore(state, action: PayloadAction<{ characterName: string }>) {
             const index = state.characters.findIndex(
-                (character: CharacterType)=> character.characterName === action.payload.characterName,
+                (character: CharacterType) => character.characterName === action.payload.characterName,
             );
 
             if (index > -1) {
@@ -32,25 +33,32 @@ export const charactersSlice = createSlice({
         },
         subtractScore(state, action: PayloadAction<{ characterName: string }>) {
             const index = state.characters.findIndex(
-                (character: CharacterType)=> character.characterName === action.payload.characterName,
+                (character: CharacterType) => character.characterName === action.payload.characterName,
             );
 
-            if (index > -1) {
+            if (index > -1 && state.characters[index].score > 1) {
                 state.characters[index].score -= 1;
             }
         },
         deleteCharacter(state, action: PayloadAction<{ characterName: string }>) {
             const index = state.characters.findIndex(
-                (character: CharacterType)=> character.characterName === action.payload.characterName,
+                (character: CharacterType) => character.characterName === action.payload.characterName,
             );
 
+            debugger
             if (index > -1) {
+                debugger
                 state.characters.splice(index, 1);
             }
         },
+        clearScore(state, action) {
+            state.characters.forEach((character: CharacterType) => {
+                character.score = 1;
+            })
+        },
         editCharacterName(state, action: PayloadAction<{ characterName: string, newCharacterName: string }>) {
             const index = state.characters.findIndex(
-                (character: CharacterType)=> character.characterName === action.payload.characterName,
+                (character: CharacterType) => character.characterName === action.payload.characterName,
             );
 
             if (index > -1) {
@@ -60,6 +68,6 @@ export const charactersSlice = createSlice({
     }
 });
 
-export const { setCharacter, addScore, subtractScore, deleteCharacter, editCharacterName } = charactersSlice.actions;
+export const {setCharacter, addScore, clearScore, subtractScore, deleteCharacter, editCharacterName} = charactersSlice.actions;
 
 export const charactersReducer = charactersSlice.reducer;

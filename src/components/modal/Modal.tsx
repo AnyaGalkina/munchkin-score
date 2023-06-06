@@ -44,7 +44,7 @@ export const Modal = memo(({setOpen, setNewCharacterAvatar, isOpen}: PropsType):
                 </DialogTitle>
                 {images.map((image: string, index: number) => {
                     return (
-                        <div onClick={() => setAvatar(image)} className={avatar === image ? styles.choosen : ''}>
+                        <div onClick={() => setAvatar(image)} className={avatar === image ? styles.choosen : styles.none}>
                             <img key={index} className={styles.img} alt="order" src={image}/>
                         </div>
                     )

@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
-import {addScore, CharacterType, deleteCharacter, subtractScore} from '../../slice/charactersSlice';
+import {addScore, CharacterType, subtractScore} from '../../slice/charactersSlice';
 import styles from './Character.module.css'
 import {Button} from '../Button';
 import {IconButton} from "@material-ui/core";
@@ -16,18 +16,15 @@ export const Character = ({character}: {character: CharacterType}) => {
         dispatch(subtractScore({characterName}))
     }
 
-    const onDeleteClick = () => {
-        dispatch(deleteCharacter({characterName}))
-    }
 
     return (
         <div className={styles.character}>
             <div className={styles.characterContainer}>
                 <div  className={styles.deleteContainer}>
-                    <IconButton aria-label="delete" onClick={onDeleteClick}>
-                        {/*🗑*/}
-                        X
-                    </IconButton>
+                    {/*<IconButton aria-label="delete" onClick={onDeleteClick}>*/}
+                    {/*    /!*🗑*!/*/}
+                    {/*    X*/}
+                    {/*</IconButton>*/}
                 </div>
 
                 <img src={avatar || ''} alt={'avatar'} className={styles.image}/>

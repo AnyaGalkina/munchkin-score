@@ -1,9 +1,14 @@
 .img {
    width: 250px;
    height: 188px;
-   margin: 40px 40px 0 40px;
+   margin: 5px;
 }
 
 .choosen{
-   border: solid 10px #aff510;
+   border: solid 10px #4a1715;
+   border-radius: 25px;
+}
+
+.none {
+   border: solid 10px #fff;
 }

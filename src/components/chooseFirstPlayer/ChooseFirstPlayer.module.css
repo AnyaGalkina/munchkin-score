@@ -1,14 +1,18 @@
 .container {
-    background: rgb(0, 0, 0, 0.8);
-    color: aliceblue;
     min-width: 320px;
     padding: 20px;
+    background: #fff3e8;
+    border: solid 10px #4a1715;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    height: 100px;
+    font-size: 26px;
 }
 
 .button{
     margin-bottom: 20px;
     font-size: 20px;
-    width: 200px;
+    width: 230px;
     font-weight: bold;
     padding: 10px 20px;
 }

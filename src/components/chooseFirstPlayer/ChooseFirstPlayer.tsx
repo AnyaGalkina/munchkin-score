@@ -18,8 +18,8 @@ export const ChooseFirstPlayer = () => {
 
     return (
         <div className={styles.container}>
-            <Button title={'How go first? 🎲'} onClick={onHowGoFirstClick} className={styles.button}/>
-            {firstPlayer && <div>{firstPlayer} play first </div>}
+            <Button title={'Who goes first? 🎲'} onClick={onHowGoFirstClick} className={styles.button}/>
+            {firstPlayer && <div><b>{firstPlayer}</b> plays first </div>}
         </div>
     );
 };

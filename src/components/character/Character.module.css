@@ -1,11 +1,14 @@
-.character{
+.character {
     display: flex;
     flex-direction: column;
     align-items: end;
-    background: rgba(0, 0, 0, 0.5);
+    background: #fff3e8;
     min-width: 320px;
     padding: 10px;
+    border: solid 10px #4a1715;
+    border-radius: 25px;
 }
+
 .characterContainer {
     margin-top: 5px;
     display: flex;
@@ -24,7 +27,8 @@
 .name {
     width: 220px;
     font-size: 26px;
-    color: aliceblue;
+    /*color: #4a1715;*/
+    /*color: aliceblue;*/
     word-wrap: break-word;
 }
 
@@ -33,14 +37,13 @@
     font-weight: bolder;
     color: aliceblue;
     margin: 0 10px;
-    background: rgba(0, 0, 0, 0.5);
+    background: #4a1715;
     width: 50px;
     padding: 10px;
     border-radius: 20%;
 }
 
 .deleteContainer {
-    /*margin-left: 2px;*/
 }
 
 .buttonContainer {
@@ -49,8 +52,7 @@
     margin-left: 10px;
 }
 
-.button{
-    /*margin: 10px 5px;*/
+.button {
     width: 50px;
     height: 50px;
     font-size: 35px;
