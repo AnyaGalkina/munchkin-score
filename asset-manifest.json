@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/munchkin-score/static/css/main.5bf11915.css",
-    "main.js": "/munchkin-score/static/js/main.5d1f871b.js",
+    "main.css": "/munchkin-score/static/css/main.4f2b1677.css",
+    "main.js": "/munchkin-score/static/js/main.7ada468e.js",
     "static/media/bg3.jpg": "/munchkin-score/static/media/bg3.12d9bbec01338cef6e5e.jpg",
     "static/media/14.png": "/munchkin-score/static/media/14.af4499dadccde457c4d1.png",
-    "static/media/23.png": "/munchkin-score/static/media/23.2291aa935c47e4f6f21d.png",
+    "static/media/23.png": "/munchkin-score/static/media/23.687d7c472a3eacf1c0b2.png",
     "static/media/30.png": "/munchkin-score/static/media/30.755bf3241c90b2e59195.png",
     "static/media/29.png": "/munchkin-score/static/media/29.0cce9cd491cc1ba363ef.png",
     "static/media/16.png": "/munchkin-score/static/media/16.ab26859777f6b55eb631.png",
@@ -14,17 +14,21 @@
     "static/media/8.png": "/munchkin-score/static/media/8.03d4cc8265a16c3250b6.png",
     "static/media/6.png": "/munchkin-score/static/media/6.37f5891a2ef695d5a49e.png",
     "static/media/15.png": "/munchkin-score/static/media/15.2229ddfa4061ebea202c.png",
+    "static/media/32.png": "/munchkin-score/static/media/32.95c6f24b22ddbf522d3c.png",
     "static/media/20.png": "/munchkin-score/static/media/20.6783aaebff73e54184a8.png",
     "static/media/17.png": "/munchkin-score/static/media/17.f878a9d95b9c710bfc2f.png",
-    "static/media/28.png": "/munchkin-score/static/media/28.f621a748b6e69b785f28.png",
+    "static/media/28.png": "/munchkin-score/static/media/28.eaa372bf8cfab43d023b.png",
     "static/media/12.png": "/munchkin-score/static/media/12.fa065fe84c60d5d82e95.png",
     "static/media/24.png": "/munchkin-score/static/media/24.c4198dd004659e7f9f67.png",
-    "static/media/27.png": "/munchkin-score/static/media/27.c265094d74ab004c17f6.png",
+    "static/media/31.png": "/munchkin-score/static/media/31.d2cc08716e6305568d48.png",
     "static/media/18.png": "/munchkin-score/static/media/18.675216d78a5b683057ac.png",
     "static/media/19.png": "/munchkin-score/static/media/19.0417ef556c051a498a25.png",
     "static/media/26.png": "/munchkin-score/static/media/26.c1a3c18fad56ae32f926.png",
     "static/media/3.png": "/munchkin-score/static/media/3.5a015b9a92df742cf28a.png",
+    "static/media/33.png": "/munchkin-score/static/media/33.dbefe4d54294edf333e1.png",
+    "static/media/4.png": "/munchkin-score/static/media/4.053eae081686bcd492e8.png",
     "static/media/21.png": "/munchkin-score/static/media/21.72e3a43a5d54f14d9be7.png",
+    "static/media/27.png": "/munchkin-score/static/media/27.a51c6d2862699a982d95.png",
     "static/media/9.png": "/munchkin-score/static/media/9.33573792e3884cdebafc.png",
     "static/media/7.png": "/munchkin-score/static/media/7.f16ce97f37d28887f1ce.png",
     "static/media/22.png": "/munchkin-score/static/media/22.4165f71aab3bce9ab2dc.png",
@@ -34,14 +38,13 @@
     "static/media/5.png": "/munchkin-score/static/media/5.714c8df07d08b9b77b20.png",
     "static/media/11.png": "/munchkin-score/static/media/11.555066d8d28e238e4cd0.png",
     "static/media/10.png": "/munchkin-score/static/media/10.83d0031e2fa7d5b548ef.png",
-    "static/media/4.png": "/munchkin-score/static/media/4.3c50c4d0b5a37d0e579d.png",
     "static/media/logo.png": "/munchkin-score/static/media/logo.96a7c268ce0986620f5a.png",
     "index.html": "/munchkin-score/index.html",
-    "main.5bf11915.css.map": "/munchkin-score/static/css/main.5bf11915.css.map",
-    "main.5d1f871b.js.map": "/munchkin-score/static/js/main.5d1f871b.js.map"
+    "main.4f2b1677.css.map": "/munchkin-score/static/css/main.4f2b1677.css.map",
+    "main.7ada468e.js.map": "/munchkin-score/static/js/main.7ada468e.js.map"
   },
   "entrypoints": [
-    "static/css/main.5bf11915.css",
-    "static/js/main.5d1f871b.js"
+    "static/css/main.4f2b1677.css",
+    "static/js/main.7ada468e.js"
   ]
 }
