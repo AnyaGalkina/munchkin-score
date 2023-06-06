@@ -23,7 +23,10 @@ export const Main = () => {
 
     return (
         <div className={styles.mainContainer}>
-            <img src={logo} alt={'logo'}/>
+            <div style={{margin: '15px 0 5px'}}>
+                <img src={logo} alt={'logo'} />
+            </div>
+
             {showCharacters
                 ? characters.map((character: CharacterType) => {
                     return <Swiper key={character.id} character={character}/>

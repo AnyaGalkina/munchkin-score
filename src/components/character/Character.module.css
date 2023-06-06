@@ -53,6 +53,7 @@
 }
 
 .button {
+    text-align: center;
     background:#fff;
     color:#4a1715;
     width: 50px;

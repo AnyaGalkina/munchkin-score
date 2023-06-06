@@ -29,6 +29,9 @@ import i27 from '../../assets/images/27.png';
 import i28 from '../../assets/images/28.png';
 import i29 from '../../assets/images/29.png';
 import i30 from '../../assets/images/30.png';
+import i31 from '../../assets/images/31.png';
+import i32 from '../../assets/images/32.png';
+import i33 from '../../assets/images/33.png';
 export const images: string[] = [i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10,
     i11, i12, i13, i14, i15,  i16, i17, i18, i19, i20,
-    i21, i22, i23, i24, i25, i26, i27, i28, i29, i30];
+    i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33];
