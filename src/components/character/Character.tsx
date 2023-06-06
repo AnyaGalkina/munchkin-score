@@ -3,30 +3,22 @@ import {useDispatch} from 'react-redux';
 import {addScore, CharacterType, subtractScore} from '../../slice/charactersSlice';
 import styles from './Character.module.css'
 import {Button} from '../Button';
-import {IconButton} from "@material-ui/core";
 
 export const Character = ({character}: {character: CharacterType}) => {
-    const {characterName, score, avatar} = character;
+    const {characterName, score, avatar, id} = character;
     const dispatch = useDispatch()
     const onAddLevelClick = () => {
-        dispatch(addScore({characterName}))
+        dispatch(addScore({id}))
     }
 
     const onSubtractLevelClick = () => {
-        dispatch(subtractScore({characterName}))
+        dispatch(subtractScore({id}))
     }
 
 
     return (
         <div className={styles.character}>
             <div className={styles.characterContainer}>
-                <div  className={styles.deleteContainer}>
-                    {/*<IconButton aria-label="delete" onClick={onDeleteClick}>*/}
-                    {/*    /!*🗑*!/*/}
-                    {/*    X*/}
-                    {/*</IconButton>*/}
-                </div>
-
                 <img src={avatar || ''} alt={'avatar'} className={styles.image}/>
                 <div className={styles.name}>{characterName}</div>
             </div>

@@ -22,32 +22,30 @@ export const charactersSlice = createSlice({
             state.characters.unshift(action.payload);
             console.log(state.characters)
         },
-        addScore(state, action: PayloadAction<{ characterName: string }>) {
+        addScore(state, action: PayloadAction<{ id: number }>) {
             const index = state.characters.findIndex(
-                (character: CharacterType) => character.characterName === action.payload.characterName,
+                (character: CharacterType) => character.id === action.payload.id,
             );
 
-            if (index > -1) {
+            if (index > -1 && state.characters[index].score < 99) {
                 state.characters[index].score += 1;
             }
         },
-        subtractScore(state, action: PayloadAction<{ characterName: string }>) {
+        subtractScore(state, action: PayloadAction<{ id: number }>) {
             const index = state.characters.findIndex(
-                (character: CharacterType) => character.characterName === action.payload.characterName,
+                (character: CharacterType) => character.id === action.payload.id,
             );
 
-            if (index > -1 && state.characters[index].score > 1) {
+            if (index > -1 && state.characters[index].score > 1 ) {
                 state.characters[index].score -= 1;
             }
         },
-        deleteCharacter(state, action: PayloadAction<{ characterName: string }>) {
+        deleteCharacter(state, action: PayloadAction<{ id: number }>) {
             const index = state.characters.findIndex(
-                (character: CharacterType) => character.characterName === action.payload.characterName,
+                (character: CharacterType) => character.id === action.payload.id,
             );
 
-            debugger
             if (index > -1) {
-                debugger
                 state.characters.splice(index, 1);
             }
         },
@@ -68,6 +66,13 @@ export const charactersSlice = createSlice({
     }
 });
 
-export const {setCharacter, addScore, clearScore, subtractScore, deleteCharacter, editCharacterName} = charactersSlice.actions;
+export const {
+    setCharacter,
+    addScore,
+    clearScore,
+    subtractScore,
+    deleteCharacter,
+    editCharacterName
+} = charactersSlice.actions;
 
 export const charactersReducer = charactersSlice.reducer;

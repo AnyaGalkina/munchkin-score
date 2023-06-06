@@ -14,7 +14,7 @@ export const Swiper = ({character}: PropsType) => {
     const dispatch = useDispatch()
 
     const handleDelete = () => {
-        dispatch(deleteCharacter({characterName: character.characterName}))
+        dispatch(deleteCharacter({id: character.id}))
     }
 
 
@@ -34,14 +34,6 @@ export const Swiper = ({character}: PropsType) => {
                 id="swiper-1" // not default
                 className={styles.swiper} // not default
                 rtl={false} // default
-                // onDeleteConfirm={(onSuccess: any, onCancel: any) => {
-                //     // not default - default is null
-                //     if (window.confirm("Do you really want to delete this item ?")) {
-                //         onSuccess();
-                //     } else {
-                //         onCancel();
-                //     }
-                // }}
             >
                 <Character character={character}/>
             </SwipeToDelete>

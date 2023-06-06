@@ -19,8 +19,15 @@
 }
 
 .button {
+    background:#fff;
+    color:#4a1715;
     font-size: 20px;
-    width: 200px;
+    width: 250px;
     font-weight: bold;
     padding: 10px 20px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
 }

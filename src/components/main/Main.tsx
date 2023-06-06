@@ -33,9 +33,10 @@ export const Main = () => {
                     <img src={no} style={{width: '300px'}}/>
                 </div>
             }
-            {/*<div className={styles.restart}>*/}
+
+            <div className={styles.restart}>
                 <Button title={'Restart'} onClick={onRestartClick} className={styles.button}/>
-            {/*</div>*/}
+            </div>
 
             <AddNewCharacter/>
             {showCharacters ? <ChooseFirstPlayer/> : ''}
