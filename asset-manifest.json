@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/munchkin-score/static/css/main.6a51f665.css",
-    "main.js": "/munchkin-score/static/js/main.4c9e13a3.js",
+    "main.css": "/munchkin-score/static/css/main.5bf11915.css",
+    "main.js": "/munchkin-score/static/js/main.5d1f871b.js",
     "static/media/bg3.jpg": "/munchkin-score/static/media/bg3.12d9bbec01338cef6e5e.jpg",
     "static/media/14.png": "/munchkin-score/static/media/14.af4499dadccde457c4d1.png",
     "static/media/23.png": "/munchkin-score/static/media/23.2291aa935c47e4f6f21d.png",
@@ -37,11 +37,11 @@
     "static/media/4.png": "/munchkin-score/static/media/4.3c50c4d0b5a37d0e579d.png",
     "static/media/logo.png": "/munchkin-score/static/media/logo.96a7c268ce0986620f5a.png",
     "index.html": "/munchkin-score/index.html",
-    "main.6a51f665.css.map": "/munchkin-score/static/css/main.6a51f665.css.map",
-    "main.4c9e13a3.js.map": "/munchkin-score/static/js/main.4c9e13a3.js.map"
+    "main.5bf11915.css.map": "/munchkin-score/static/css/main.5bf11915.css.map",
+    "main.5d1f871b.js.map": "/munchkin-score/static/js/main.5d1f871b.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a51f665.css",
-    "static/js/main.4c9e13a3.js"
+    "static/css/main.5bf11915.css",
+    "static/js/main.5d1f871b.js"
   ]
 }
