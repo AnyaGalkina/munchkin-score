@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/munchkin-score/static/css/main.4f2b1677.css",
-    "main.js": "/munchkin-score/static/js/main.7ada468e.js",
+    "main.css": "/munchkin-score/static/css/main.fb4cb5a2.css",
+    "main.js": "/munchkin-score/static/js/main.e7dc3ae5.js",
     "static/media/bg3.jpg": "/munchkin-score/static/media/bg3.12d9bbec01338cef6e5e.jpg",
     "static/media/14.png": "/munchkin-score/static/media/14.af4499dadccde457c4d1.png",
     "static/media/23.png": "/munchkin-score/static/media/23.687d7c472a3eacf1c0b2.png",
@@ -38,13 +38,16 @@
     "static/media/5.png": "/munchkin-score/static/media/5.714c8df07d08b9b77b20.png",
     "static/media/11.png": "/munchkin-score/static/media/11.555066d8d28e238e4cd0.png",
     "static/media/10.png": "/munchkin-score/static/media/10.83d0031e2fa7d5b548ef.png",
+    "static/media/game-die.png": "/munchkin-score/static/media/game-die.07d3a36c45b799f25d3a.png",
+    "static/media/restart.png": "/munchkin-score/static/media/restart.04b348bd1e465a0bc2e3.png",
     "static/media/logo.png": "/munchkin-score/static/media/logo.96a7c268ce0986620f5a.png",
+    "static/media/player.avif": "/munchkin-score/static/media/player.a66fc531f6f9eb106c56.avif",
     "index.html": "/munchkin-score/index.html",
-    "main.4f2b1677.css.map": "/munchkin-score/static/css/main.4f2b1677.css.map",
-    "main.7ada468e.js.map": "/munchkin-score/static/js/main.7ada468e.js.map"
+    "main.fb4cb5a2.css.map": "/munchkin-score/static/css/main.fb4cb5a2.css.map",
+    "main.e7dc3ae5.js.map": "/munchkin-score/static/js/main.e7dc3ae5.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f2b1677.css",
-    "static/js/main.7ada468e.js"
+    "static/css/main.fb4cb5a2.css",
+    "static/js/main.e7dc3ae5.js"
   ]
 }
