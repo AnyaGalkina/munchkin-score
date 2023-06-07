@@ -1,5 +1,6 @@
 .container {
-    min-width: 320px;
+    max-width: 320px;
+    word-wrap: break-word;
     padding: 20px;
     /*background: #fff3e8;*/
     /*border: solid 10px #4a1715;*/

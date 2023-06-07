@@ -17,11 +17,18 @@
     justify-content: start;
 }
 
+.scoreContainer {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+
 .name {
     width: 220px;
     font-size: 26px;
-    /*color: #4a1715;*/
-    /*color: aliceblue;*/
+    font-weight: bold;
     word-wrap: break-word;
 }
 
@@ -42,6 +49,7 @@
 .buttonContainer {
     display: flex;
     flex-direction: row;
+    width: 120px;
     margin-left: 10px;
 }
 

@@ -23,7 +23,7 @@ export const Character = ({character}: { character: CharacterType }) => {
                 <Avatar avatar={avatar}/>
                 <div className={styles.name}>{characterName}</div>
             </div>
-            <div className={styles.characterContainer}>
+            <div className={styles.scoreContainer}>
                 <div className={styles.score}>{score}</div>
                 <div className={styles.buttonContainer}>
                     <Button title={'-'} onClick={onSubtractLevelClick} disabled={score === 1}

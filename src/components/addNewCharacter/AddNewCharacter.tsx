@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Button} from '../Button';
 import {useDispatch} from 'react-redux';
 import {setCharacter} from '../../slice/charactersSlice';
-import {Modal} from '../modal/Modal';
+import {ModalWithImages} from '../modal/ModalWithImages';
 import {random} from '../../common/utils/random';
 import {images} from '../../common/utils/images';
 import {TextField} from '@material-ui/core';
@@ -61,17 +61,12 @@ export const AddNewCharacter = () => {
             </div>
 
             <div>
-                {/*<div className={styles.block}>*/}
-                {/*    <Button*/}
-                {/*        title={'Choose avatar'}*/}
-                {/*        onClick={onAvatarChange} className={styles.button}/>*/}
-                {/*</div>*/}
                 <div className={styles.block}>
                     <Button title={'Save'} onClick={onAddNewCharacterClick} className={styles.buttonSave}/>
                 </div>
             </div>
             {isOpen
-                ? <Modal setOpen={setIsOpen} setNewCharacterAvatar={setNewCharacterAvatar} isOpen={isOpen}/>
+                ? <ModalWithImages setOpen={setIsOpen} setNewCharacterAvatar={setNewCharacterAvatar} isOpen={isOpen}/>
                 : ''
             }
         </div>
