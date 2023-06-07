@@ -7,6 +7,8 @@ import {random} from '../../common/utils/random';
 import {images} from '../../common/utils/images';
 import {TextField} from '@material-ui/core';
 import styles from './AddNewCharacter.module.css'
+import {Avatar} from '../avatar/Avatar';
+import addAvatar from '../../assets/images/add-avatar.png'
 
 
 export const AddNewCharacter = () => {
@@ -21,6 +23,8 @@ export const AddNewCharacter = () => {
     const onAddNewCharacterClick = () => {
         if (newCharacterName.length >= 30) {
             setError('Maximum length of name is 30 symbols')
+        } else if (newCharacterName.length < 1) {
+            setError('Please enter name')
         } else {
             setError('')
             const characterAvatar = newCharacterAvatar ? newCharacterAvatar : images[random(images.length)]
@@ -41,18 +45,29 @@ export const AddNewCharacter = () => {
 
     return (
         <div className={styles.addContainer}>
-            <h3 className={styles.text}>Add player:</h3>
-            <TextField variant="outlined" onChange={onInputChange} value={newCharacterName}
-                       style={{cursor: 'pointer', width: '250px'}} color="secondary"/>
-            <div className={styles.error}>{error ? error : ""}</div>
+            <h3 className={styles.text}>Add player</h3>
             <div>
-                <div className={styles.block}>
-                    <Button
-                        title={'Choose avatar'}
-                        onClick={onAvatarChange} className={styles.button}/>
+                <div onClick={onAvatarChange}>
+                    {newCharacterAvatar
+                        ? <Avatar avatar={newCharacterAvatar}/>
+                        : <Avatar avatar={addAvatar} className={styles.addAvatar}/>
+                    }
                 </div>
+                <>
+                    <TextField variant="outlined" onChange={onInputChange} value={newCharacterName}
+                               style={{cursor: 'pointer', width: '250px'}} color="secondary"/>
+                    <div className={styles.error}>{error ? error : ''}</div>
+                </>
+            </div>
+
+            <div>
+                {/*<div className={styles.block}>*/}
+                {/*    <Button*/}
+                {/*        title={'Choose avatar'}*/}
+                {/*        onClick={onAvatarChange} className={styles.button}/>*/}
+                {/*</div>*/}
                 <div className={styles.block}>
-                    <Button title={'Save'} onClick={onAddNewCharacterClick} className={styles.button}/>
+                    <Button title={'Save'} onClick={onAddNewCharacterClick} className={styles.buttonSave}/>
                 </div>
             </div>
             {isOpen

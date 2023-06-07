@@ -17,13 +17,6 @@
     justify-content: start;
 }
 
-.image {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
-    border-radius: 20%;
-}
-
 .name {
     width: 220px;
     font-size: 26px;
@@ -53,6 +46,9 @@
 }
 
 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     background:#fff;
     color:#4a1715;

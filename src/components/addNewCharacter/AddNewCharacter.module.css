@@ -5,7 +5,13 @@
     justify-content: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    padding: 1rem;
+    /*padding: 1rem;*/
+    /*background: #fff3e8;*/
+    background: #fff;
+    min-width: 320px;
+    padding: 10px;
+    border: solid 10px #4a1715;
+    border-radius: 25px;
 }
 
 .block {
@@ -27,7 +33,21 @@
     padding: 10px 20px;
 }
 
+.buttonSave {
+    background:#4a1715;
+    color:#fff;
+    font-size: 20px;
+    width: 250px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
 .error {
     color: red;
     font-size: 14px;
+}
+
+.addAvatar {
+ /*b: solid 1px #4a1715;*/
+    background: #fff3e8;
 }

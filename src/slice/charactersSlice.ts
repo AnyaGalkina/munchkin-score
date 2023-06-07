@@ -9,13 +9,17 @@ export type CharacterType = {
 
 type CharactersStateType = {
     characters: Array<CharacterType>;
+    additionalContent: AdditionalContentType;
 }
+
+export type AdditionalContentType = 'addNewCharacter' | 'chooseFirstPlayer' | ''
+
 
 export const charactersSlice = createSlice({
     name: 'characters',
     initialState: {
         characters: [],
-        totalUsersCount: 0,
+        additionalContent: 'addNewCharacter'
     } as CharactersStateType,
     reducers: {
         setCharacter(state: CharactersStateType, action: PayloadAction<CharacterType>) {
@@ -54,6 +58,9 @@ export const charactersSlice = createSlice({
                 character.score = 1;
             })
         },
+        setAdditionalContent(state, action: PayloadAction<AdditionalContentType>) {
+            state.additionalContent = action.payload;
+        },
         editCharacterName(state, action: PayloadAction<{ characterName: string, newCharacterName: string }>) {
             const index = state.characters.findIndex(
                 (character: CharacterType) => character.characterName === action.payload.characterName,
@@ -72,6 +79,7 @@ export const {
     clearScore,
     subtractScore,
     deleteCharacter,
+    setAdditionalContent,
     editCharacterName
 } = charactersSlice.actions;
 
